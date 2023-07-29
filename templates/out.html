@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passwords</title>
+</head>
+<body>
+    <style>
+        body
+        {
+            background-color:#65c3ba;
+        }
+        h1 
+        {
+            color:	white; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        ul
+        {
+            list-style: none;
+            color: #216962;
+            font-size: large;
+        }
+    </style>
+    <br><center><h1>Passwords generated</h1></center><br>
+    <center>
+        <ul>
+            {% for item in passwd %}
+            <li>{{ item|safe }}</li>
+            {% endfor %}
+        </ul><br>
+    </center>
+</body>
+</html>

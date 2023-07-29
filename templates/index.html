@@ -1,1 +1,57 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+</head>
+<body>
+  <style>
+    body
+    {
+      background-color:#65c3ba;
+    }
+    label
+    {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: large;
+    }
+    h1 
+    {
+      color:	white; 
+      vertical-align: text-bottom;
+      font-family: Arial, Helvetica, sans-serif;
+      top: 50%;
+      left: 50%;
+    }
+    input[type=text] 
+    {
+      width: 3;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    button 
+    {
+      width: 3;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      color: white;
+      background-color: #35a79c;
+      font-family: Arial, Helvetica, sans-serif;
+      border-color: white;
+    }
+  </style>
+  <br><br>
+  <center><h1>Password Generator</h1></center><br><br><br>
+  <center><form action="{{ url_for("passlen")}}" method="post">
+    <label for="length_of_password">Length of the password</label><br>
+    <input type="text" id="length_of_password" name="pwdlen" placeholder="length_of_password"><br><br><br>
+    <label for="quantity_of_password">Quantity of the password</label><br>
+    <input type="text" id="quantity_of_password" name="pwdquant" placeholder="quantity_of_password"><br><br><br>
+    <button type="submit">Generate</button>
+  </center> 
+</body>
+</html>
